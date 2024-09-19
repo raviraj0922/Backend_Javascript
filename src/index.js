@@ -1,15 +1,11 @@
-// require('dotenv').config({path: './env'})
 import dotenv from "dotenv";
-import express from "express";
+import { app } from "./aap.js"; // Import the app from app.js
 import connectDB from "./db/index.js";
 
 // Load environment variables
 dotenv.config({
     path: './env'
 });
-
-// Create an instance of Express
-const app = express();
 
 // Connect to MongoDB
 connectDB()
